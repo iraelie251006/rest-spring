@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -16,12 +15,12 @@ public class SoftwareEngineerController {
                 new SoftwareEngineer(
                         1,
                         "Elie",
-                        Collections.singletonList("Python, JavaScript, TypeScript, ExpressJs, FastAPI")
+                        List.of("Python", "JavaScript", "TypeScript", "ExpressJs", "FastAPI")
                 ),
                 new SoftwareEngineer(
                         2,
                         "Irakoze",
-                        Collections.singletonList("Java, Spring Boot, Docker, AWS, GCP")
+                        List.of("Java", "Spring Boot", "Docker", "AWS", "GCP")
                 )
         );
     }
