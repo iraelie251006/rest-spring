@@ -1,6 +1,8 @@
 package com.iraelie.rest_spring;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.List;
@@ -10,6 +12,7 @@ import java.util.Objects;
 public class SoftwareEngineer {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private Integer id;
     private String name;
     private List<String> techStack;
