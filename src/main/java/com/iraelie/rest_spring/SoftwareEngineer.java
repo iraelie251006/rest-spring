@@ -7,27 +7,30 @@ import jakarta.persistence.Id;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @Entity
 public class SoftwareEngineer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private String name;
     private List<String> techStack;
 
-    public SoftwareEngineer(Integer id, String name, List<String> techStack) {
+    public SoftwareEngineer() {}
+
+    public SoftwareEngineer(UUID id, String name, List<String> techStack) {
         this.id = id;
         this.name = name;
         this.techStack = techStack;
     }
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
