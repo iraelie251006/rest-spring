@@ -12,7 +12,7 @@ import java.util.Objects;
 public class SoftwareEngineer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private List<String> techStack;
